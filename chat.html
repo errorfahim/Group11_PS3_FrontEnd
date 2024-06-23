@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Help Center Chat</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 4rem);
+    padding: 2rem;
+}
+
+#chat-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-window {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.message.admin {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+}
+
+#chat-form {
+    display: flex;
+    padding: 1rem;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#chat-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+}
+
+#chat-form button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vaccine Help Center Chat</h1>
+    </header>
+    <main>
+        <section id="chat-section">
+            <div id="chat-window">
+                <div id="chat-messages">
+                    <!-- Messages will be dynamically injected here -->
+                </div>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your message here..." required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #333333;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+input[type="text"], input[type="date"], input[type="tel"], input[type="email"], input[type="radio"], input[type="checkbox"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical History Form</h1>
+        <form id="medicalHistoryForm">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+                
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                
+                <label for="email">Email Address (optional):</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required>
+            </fieldset>
+
+            <!-- Medical History -->
+            <fieldset>
+                <legend>Medical History</legend>
+                <label>Do you have any of the following conditions? (Check all that apply):</label><br>
+                <input type="checkbox" id="diabetes" name="condition" value="Diabetes">
+                <label for="diabetes">Diabetes</label><br>
+                <input type="checkbox" id="heart" name="condition" value="Heart Disease">
+                <label for="heart">Heart Disease</label><br>
+                <input type="checkbox" id="respiratory" name="condition" value="Respiratory Conditions">
+                <label for="respiratory">Respiratory Conditions</label><br>
+                <input type="checkbox" id="immunocompromised" name="condition" value="Immunocompromised">
+                <label for="immunocompromised">Immunocompromised</label><br>
+                <input type="checkbox" id="other" name="condition" value="Other">
+                <label for="other">Other</label><br>
+                <input type="text" id="other-condition" name="other-condition" placeholder="Please specify"><br><br>
+                
+                <label>Are you currently taking any medications?</label><br>
+                <input type="radio" id="medications-yes" name="medications" value="yes">
+                <label for="medications-yes">Yes</label>
+                <input type="text" id="medications-list" name="medications-list" placeholder="Please list your medications"><br>
+                <input type="radio" id="medications-no" name="medications" value="no">
+                <label for="medications-no">No</label>
+            </fieldset>
+
+            <!-- Allergies -->
+            <fieldset>
+                <legend>Allergies</legend>
+                <label>Do you have any allergies? If yes, please list them:</label><br>
+                <input type="text" id="allergies" name="allergies" placeholder="List your allergies here">
+            </fieldset>
+
+            <!-- Family Medical History -->
+            <fieldset>
+                <legend>Family Medical History</legend>
+                <label>Does any family member have a history of the following conditions? (Check all that apply):</label><br>
+                <input type="checkbox" id="family-diabetes" name="family-condition" value="Diabetes">
+                <label for="family-diabetes">Diabetes</label><br>
+                <input type="checkbox" id="family-heart" name="family-condition" value="Heart Disease">
+                <label for="family-heart">Heart Disease</label><br>
+                <input type="checkbox" id="family-respiratory" name="family-condition" value="Respiratory Conditions">
+                <label for="family-respiratory">Respiratory Conditions</label><br>
+                <input type="checkbox" id="family-immunocompromised" name="family-condition" value="Immunocompromised">
+                <label for="family-immunocompromised">Immunocompromised</label><br>
+                <input type="checkbox" id="family-other" name="family-condition" value="Other">
+                <label for="family-other">Other</label><br>
+                <input type="text" id="family-other-condition" name="family-other-condition" placeholder="Please specify"><br><br>
+            </fieldset>
+
+            <!-- Lifestyle Information -->
+            <fieldset>
+                <legend>Lifestyle Information</legend>
+                <label>Do you smoke?</label><br>
+                <input type="radio" id="smoke-yes" name="smoke" value="yes">
+                <label for="smoke-yes">Yes</label>
+                <input type="radio" id="smoke-no" name="smoke" value="no">
+                <label for="smoke-no">No</label><br><br>
+
+                <label>Do you consume alcohol?</label><br>
+                <input type="radio" id="alcohol-yes" name="alcohol" value="yes">
+                <label for="alcohol-yes">Yes</label>
+                <input type="radio" id="alcohol-no" name="alcohol" value="no">
+                <label for="alcohol-no">No</label><br><br>
+
+                <label>Do you exercise regularly?</label><br>
+                <input type="radio" id="exercise-yes" name="exercise" value="yes">
+                <label for="exercise-yes">Yes</label>
+                <input type="radio" id="exercise-no" name="exercise" value="no">
+                <label for="exercise-no">No</label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script src="Medical_History.js"></script>
+</body>
+</html>

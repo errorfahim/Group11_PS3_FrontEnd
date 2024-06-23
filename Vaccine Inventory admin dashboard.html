@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Vaccine Inventory</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+#form-section, #inventory-section {
+    margin-bottom: 2rem;
+}
+
+#inventory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.vaccine {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: calc(33% - 2rem);
+    box-sizing: border-box;
+}
+
+.vaccine h2 {
+    margin-top: 0;
+}
+
+.vaccine p {
+    margin: 0.5rem 0;
+}
+
+.vaccine button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.vaccine button.update {
+    background-color: #ffc107;
+    margin-right: 0.5rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard - Vaccine Inventory</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Add or Update Vaccine Inventory</h2>
+            <form id="inventory-form">
+                <label for="name">Vaccine Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="manufacturer">Manufacturer:</label>
+                <input type="text" id="manufacturer" name="manufacturer" required>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="date" id="expiryDate" name="expiryDate" required>
+                
+                <button type="submit">Save Vaccine</button>
+            </form>
+        </section>
+
+        <section id="inventory-section">
+            <h2>Current Inventory</h2>
+            <div id="inventory">
+                <!-- Vaccine inventory will be dynamically injected here -->
+            </div>
+        </section>
+    </main>
+    <script src="vacc inventory admin dashboard js.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Dashboard</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.welcome {
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #FFC107;
+    color: white;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.disable-btn {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">User lists</a></li>
+                    <li><a href="#">Add user</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+            <p class="welcome">Welcome! <strong>admin</strong></p>
+        </header>
+
+        <main>
+            <h2>User List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Name</th>
+                        <th>Email address</th>
+                        <th>Mobile</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>johndoe@gmail.com</td>
+                        <td>1234567890</td>
+                        <td>Active</td>
+                        <td>2024-06-20</td>
+                        <td>
+                            <button class="view-btn">View</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="remove-btn">Remove</button>
+                            <button class="disable-btn">Disable</button>
+                        </td>
+                    </tr>
+                    <!-- Additional rows go here -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button>Previous</button>
+                <span>Page 1 of 1</span>
+                <button>Next</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="Medical_History_Dashboard.js"></script>
+</body>
+</html>

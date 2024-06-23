@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <h3 align="center">
+    <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+    <font face="sans-serif" color="0A6847" size="7">
+        Integrated Vaccination System of Bangladesh
+        </font>
+</h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination History Form</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#update-button {
+    background-color: #2196F3;
+}
+
+#update-button:hover {
+    background-color: #1E88E5;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vaccination History Form</h1>
+        </header>
+
+        <main>
+            <form id="vaccination-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vaccine">Vaccine Name:</label>
+                    <select id="vaccine" name="vaccine" required>
+                        <option value="Pfizer">Pfizer</option>
+                        <option value="Moderna">Moderna</option>
+                        <option value="AstraZeneca">AstraZeneca</option>
+                        <option value="Johnson & Johnson">Johnson & Johnson</option>
+                        <option value="Sinopharm">Sinopharm</option>
+                        <option value="Sinovac">Sinovac</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dose1-date">First Dose Date:</label>
+                    <input type="date" id="dose1-date" name="dose1-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dose2-date">Second Dose Date:</label>
+                    <input type="date" id="dose2-date" name="dose2-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="booster-date">Booster Dose Date:</label>
+                    <input type="date" id="booster-date" name="booster-date">
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="button" id="update-button">Update</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="Vaccination_History_js.js"></script>
+</body>
+</html>

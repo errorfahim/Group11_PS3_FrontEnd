@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iVSB</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+      * {box-sizing: border-box;}
+      body {font-family: Arial, sans-serif;}
+
+      .slider {
+          position: relative;
+          max-width: 70%;
+          margin: auto;
+          overflow: hidden;
+      }
+
+      .slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          width: 100%;
+      }
+
+      .slide {
+          width: 100%;
+          flex: 1 0 50%;
+      }
+
+      .slide img {
+          width: 100%;
+          display: block;
+      }
+
+      .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+      }
+
+      .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+      }
+
+      .dots {
+          text-align: center;
+          padding: 20px;
+          background: #ddd;
+      }
+
+      .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+          background-color: #717171;
+      }
+  </style>
+ 
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .demographic-box {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .demographic-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .demographic-box img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .demographic-box .content {
+        padding: 20px;
+    }
+    
+    .demographic-box h3 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+    
+    .demographic-box p {
+        margin: 0;
+        color: #666;
+    }
+    
+    @media (max-width: 768px) {
+        .demographic-box {
+            width: 100%;
+        }
+    }
+</style> 
+
+<style>
+  #map {
+      height: 400px;
+      width: 100%;
+  }
+</style>
+</head>
+
+
+
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+  
+    <div class="navbar">
+      <div class="dropdown">
+          <button class="dropbtn">Elderly
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Elderly%20Login.html">Sign Up </a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/User%20Data.html#">User Data</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Medical History
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Medical%20History.html">Input</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Medical%20History%20Dashboard.html">Analytics</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Vaccination History 
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Vaccination%20History.html">Update Data</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Vaccination_History_Admin_Dashboard.html">Data</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Vaccination Campaigns
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/vaccination%20campaign.html">Campaigns</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/vaccination%20campaign%20admin%20dasboard.html">Add Campaigns</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Vaccine Center
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="#">Nearby Center</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Vaccination%20Center.html">All Vaccination Center</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/vacc%20center%20admin.html">Add Vaccination Center</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Vaccine Inventory 
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Vcc%20Inventory.html">View Inventory Info</a>
+              <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Vaccine%20Inventory%20admin%20dashboard.html">Update Inventory</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">HelpLine
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/chat.html">Chat</a>
+            <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Help%20Center%20Info.html">HelpLine Info</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Login
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Login%20Page.html">Login As Elderly</a>
+            <a href="file:///C:/Users/MOSTOFA%20FAHIM%20HASAN/OneDrive/Desktop/DBMS%20Project/Login%20Page.html">Login As Admin</a>
+        </div>
+      </div>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="Slide 1.png" alt="Slide 1"></div>
+        <div class="slide"><img src="Slide 2.png" alt="Slide 2"></div>
+        <div class="slide"><img src="Slide 3.png" alt="Slide 3"></div>
+        <div class="slide"><img src="Slide 4.png" alt="Slide 4"></div>
+        <div class="slide"><img src="Slide 5.png" alt="Slide 5"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div class="dots" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n - 1);
+    }
+
+    function showSlides(n) {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        if (n >= slides.length) {slideIndex = 0}    
+        if (n < 0) {slideIndex = slides.length - 1}
+
+        slides.forEach((slide, index) => {
+            slide.style.display = 'none';  
+            if (index === slideIndex) {
+                slide.style.display = 'block';  
+            }
+        });
+
+        dots.forEach((dot, index) => {
+            dot.className = dot.className.replace(" active", "");
+            if (index === slideIndex) {
+                dot.className += " active";
+            }
+        });
+    }
+
+    setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 3000);
+</script>
+
+
+<div class="container">
+  <div class="demographic-box">
+      <img src="demo 1.png" alt="Demographic 1">
+      <div class="content">
+          <h3>Demographic 1</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+  <div class="demographic-box">
+      <img src="demo 2.png" alt="Demographic 2">
+      <div class="content">
+          <h3>Demographic 2</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+  <div class="demographic-box">
+      <img src="demo 3.png" alt="Demographic 3">
+      <div class="content">
+          <h3>Demographic 3</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+  <div class="demographic-box">
+      <img src="demo 4.png" alt="Demographic 4">
+      <div class="content">
+          <h3>Demographic 4</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+  <div class="demographic-box">
+      <img src="demo 5.png" alt="Demographic 5">
+      <div class="content">
+          <h3>Demographic 5</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+  <div class="demographic-box">
+      <img src="demo 6.png" alt="Demographic 6">
+      <div class="content">
+          <h3>Demographic 6</h3>
+          <p>Description of the demographic group and why vaccination is important.</p>
+      </div>
+  </div>
+</div>
+<h2>Nearby Vaccination Center</h2>
+<div id="map"></div>
+<script>
+    function initMap() {
+        // The location of the center
+        var center = {lat: 40.7128, lng: -74.0060};
+        // The map, centered at the center
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 12, center: center});
+        // The marker, positioned at the center
+        var marker = new google.maps.Marker({position: center, map: map});
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+</body>
+</html>

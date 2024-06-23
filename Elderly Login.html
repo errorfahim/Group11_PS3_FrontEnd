@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iVSB</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+    <h3 align="center">
+        <font face="sans-serif" size="6" color="#2c3e50"><img src="logo.png" height="80" width="80"></font>
+        <font face="sans-serif" color="0A6847" size="7">
+            Integrated Vaccination System of Bangladesh
+            </font>
+    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Registration Portal</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #333333;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+input[type="text"], input[type="date"], input[type="tel"], input[type="email"], input[type="radio"], input[type="checkbox"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 1%;
+    font-size: 1em;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+p {
+    text-align: center;
+    color: #555555;
+}
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vaccine Registration Portal</h1>
+        <h2>Sign Up for iVSB</h2>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+                
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                
+                <label for="email">Email Address (optional):</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Health Information</legend>
+                <label>Do you have any of the following conditions? (Check all that apply):</label><br>
+                <input type="checkbox" id="diabetes" name="condition" value="diabetes">
+                <label for="diabetes">Diabetes</label><br>
+                <input type="checkbox" id="heart" name="condition" value="heart">
+                <label for="heart">Heart Disease</label><br>
+                <input type="checkbox" id="respiratory" name="condition" value="respiratory">
+                <label for="respiratory">Respiratory Conditions</label><br>
+                <input type="checkbox" id="immunocompromised" name="condition" value="immunocompromised">
+                <label for="immunocompromised">Immunocompromised</label><br>
+                <input type="checkbox" id="other" name="condition" value="other">
+                <label for="other">Other</label><br>
+                <input type="text" id="other-condition" name="other-condition" placeholder="Please specify"><br><br>
+                
+                <label>Are you currently taking any medications?</label><br>
+                <input type="radio" id="medications-yes" name="medications" value="yes">
+                <label for="medications-yes">Yes</label>
+                <input type="text" id="medications-list" name="medications-list" placeholder="Please list your medications"><br>
+                <input type="radio" id="medications-no" name="medications" value="no">
+                <label for="medications-no">No</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vaccine Preferences</legend>
+                <label for="vaccine">Preferred Vaccine:</label>
+                <select id="vaccine" name="vaccine">
+                    <option value="pfizer">Pfizer</option>
+                    <option value="moderna">Moderna</option>
+                    <option value="johnson">Johnson & Johnson</option>
+                    <option value="none">No preference</option>
+                </select><br><br>
+                
+                <label>Preferred Appointment Time:</label><br>
+                <input type="radio" id="morning" name="time" value="morning">
+                <label for="morning">Morning (8 AM - 12 PM)</label><br>
+                <input type="radio" id="afternoon" name="time" value="afternoon">
+                <label for="afternoon">Afternoon (12 PM - 4 PM)</label><br>
+                <input type="radio" id="evening" name="time" value="evening">
+                <label for="evening">Evening (4 PM - 8 PM)</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Emergency Contact</legend>
+                <label for="emergency-name">Emergency Contact Name:</label>
+                <input type="text" id="emergency-name" name="emergency-name" required><br><br>
+                
+                <label for="emergency-phone">Emergency Contact Phone Number:</label>
+                <input type="tel" id="emergency-phone" name="emergency-phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Assistance</legend>
+                <label>Do you need assistance with transportation to the vaccine site?</label><br>
+                <input type="radio" id="transport-yes" name="transport" value="yes">
+                <label for="transport-yes">Yes</label>
+                <input type="radio" id="transport-no" name="transport" value="no">
+                <label for="transport-no">No</label><br><br>
+                
+                <label>Do you need any special accommodations?</label><br>
+                <input type="radio" id="accommodation-yes" name="accommodation" value="yes">
+                <label for="accommodation-yes">Yes</label>
+                <input type="text" id="accommodation-details" name="accommodation-details" placeholder="Please specify"><br>
+                <input type="radio" id="accommodation-no" name="accommodation" value="no">
+                <label for="accommodation-no">No</label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <p>If you need help with this form, please call our support line at <strong>1-800-123-4567</strong>.</p>
+        <p>Your information will be kept confidential and used only for the purpose of scheduling your vaccine appointment.</p>
+    </div>
+</body>
+</html>
